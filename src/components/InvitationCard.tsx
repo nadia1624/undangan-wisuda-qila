@@ -49,7 +49,7 @@ export default function InvitationCard({ guestName }: InvitationCardProps) {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="glass-card paper-texture max-w-[650px] w-full p-8 sm:p-12 md:p-16 rounded-2xl shadow-2xl relative gold-border text-center overflow-hidden"
+        className="glass-card paper-texture max-w-[720px] w-full p-6 sm:p-12 md:p-16 rounded-2xl shadow-2xl relative gold-border text-center overflow-hidden"
       >
         {/* Intricate Inner Border */}
         <div className="absolute inset-4 rounded-xl border border-gold/25 pointer-events-none" />
@@ -80,10 +80,10 @@ export default function InvitationCard({ guestName }: InvitationCardProps) {
         {/* Graduate Portrait inside Luxury Frame */}
         <motion.div
           variants={itemVariants}
-          className="relative w-56 h-72 sm:w-64 sm:h-84 mx-auto mb-8 z-10"
+          className="relative w-64 h-84 sm:w-80 sm:h-[420px] mx-auto mb-8 z-10"
         >
           {/* Top Hanging Bow SVG decoration */}
-          <div className="absolute top-[-20px] left-1/2 transform -translate-x-1/2 w-16 h-11 z-20 pointer-events-none">
+          <div className="absolute top-[-24px] left-1/2 transform -translate-x-1/2 w-18 h-12 z-20 pointer-events-none">
             <svg viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-[#3F1116]">
               {/* Ribbon Bow */}
               <path d="M50 40 C35 25, 20 25, 20 40 C20 55, 35 55, 50 40" fill="currentColor"/>
