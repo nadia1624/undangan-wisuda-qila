@@ -80,10 +80,10 @@ export default function InvitationCard({ guestName }: InvitationCardProps) {
         {/* Graduate Portrait inside Luxury Frame */}
         <motion.div
           variants={itemVariants}
-          className="relative w-44 h-56 sm:w-52 sm:h-68 mx-auto mb-8 z-10"
+          className="relative w-56 h-72 sm:w-64 sm:h-84 mx-auto mb-8 z-10"
         >
           {/* Top Hanging Bow SVG decoration */}
-          <div className="absolute top-[-18px] left-1/2 transform -translate-x-1/2 w-14 h-10 z-20 pointer-events-none">
+          <div className="absolute top-[-20px] left-1/2 transform -translate-x-1/2 w-16 h-11 z-20 pointer-events-none">
             <svg viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-[#3F1116]">
               {/* Ribbon Bow */}
               <path d="M50 40 C35 25, 20 25, 20 40 C20 55, 35 55, 50 40" fill="currentColor"/>
