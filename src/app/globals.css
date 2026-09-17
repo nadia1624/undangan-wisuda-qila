@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #F5ECE1;
+  --color-cream: #EFE6DA;
+  --color-gold: #D4AF37;
+  --color-gold-light: #F7EFE3;
+  --color-maroon: #3F1116;
+  --color-maroon-dark: #2A090D;
+  --color-warm-beige: #E6D8C6;
+  --color-pearl: #FAF6F0;
+
+  --font-serif: var(--font-cormorant), serif;
+  --font-sans: var(--font-inter), sans-serif;
+  --font-accent: var(--font-great-vibes), cursive;
+  
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-spin-slow: spin 20s linear infinite;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-shimmer: shimmer 2.5s infinite linear;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+:root {
+  --background: #F5ECE1;
+  --foreground: #3F1116;
+  --gold-gradient: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom premium utilities */
+.gold-border {
+  border: 1px solid transparent;
+  background-image: linear-gradient(#F5ECE1, #F5ECE1), linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.gold-border-thin {
+  border: 1px solid transparent;
+  background-image: linear-gradient(#FAF6F0, #FAF6F0), linear-gradient(135deg, #D4AF37 0%, #FFF 50%, #D4AF37 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.gold-text-foil {
+  background: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: shimmer 5s linear infinite;
+}
+
+.gold-bg-foil {
+  background: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
+  background-size: 200% auto;
+  animation: shimmer 5s linear infinite;
+}
+
+/* Satin sheet effect - rich dominant neutral beige */
+.satin-bg {
+  background-color: #F5ECE1;
+  background-image: 
+    radial-gradient(at 0% 0%, #FAF6F0 0, transparent 60%),
+    radial-gradient(at 100% 0%, #EFE5D8 0, transparent 55%),
+    radial-gradient(at 50% 100%, #E5D7C5 0, transparent 60%);
+  background-size: 100% 100%;
+}
+
+/* Glassmorphism card - warm beige tone */
+.glass-card {
+  background: rgba(247, 241, 233, 0.90);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(63, 17, 22, 0.16);
+  box-shadow: 0 8px 32px 0 rgba(63, 17, 22, 0.07);
+}
+
+.glass-card-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px 0 rgba(63, 17, 22, 0.16);
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+/* Paper texture overlay */
+.paper-texture {
+  position: relative;
+}
+.paper-texture::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  opacity: 0.025;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F5ECE1;
+}
+::-webkit-scrollbar-thumb {
+  background: #3F1116;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2A090D;
+}
+
+/* Custom styles for Swiper */
+.swiper-pagination-bullet-active {
+  background: #D4AF37 !important;
+}
+.swiper-button-next, .swiper-button-prev {
+  color: #3F1116 !important;
+}
