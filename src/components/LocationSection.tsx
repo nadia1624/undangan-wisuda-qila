@@ -157,7 +157,15 @@ export default function LocationSection() {
               <div>
                 <h4 className="font-serif font-bold text-base text-[#3F1116]">Kontak RSVP</h4>
                 <p className="font-sans text-xs text-[#3F1116]/80 mt-1">
-                  Aqila Ahda Rayhaani: <span className="font-bold text-[#3F1116]">083124517280</span>
+                  Aqila Ahda Rayhaani:{" "}
+                  <a
+                    href="https://wa.me/6281284286376"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-bold text-[#3F1116] hover:underline"
+                  >
+                    +62 812-8428-6376
+                  </a>
                 </p>
               </div>
             </motion.div>
